@@ -2,9 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/following": "pages/following.js",
   "/non-followers": "pages/non-followers.js",
-  "/top-likers": "pages/top-likers.js",
-  "/followers": "pages/followers.js"
+  "/followers": "pages/followers.js",
+  "/following": "pages/following.js"
 }

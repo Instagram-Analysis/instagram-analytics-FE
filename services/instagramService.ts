@@ -1,30 +1,28 @@
-import { Follower, Liker } from '../types/instagram';
+// frontend/services/instagramService.ts
+const API = process.env.NEXT_PUBLIC_API_URL!;
 
-// these return mock data for now
+import { Follower, Liker } from "../types/instagram";
+
 export async function fetchFollowers(): Promise<Follower[]> {
-  return [
-    { id: '1', username: 'alice', avatarUrl: '/favicon.ico' },
-    { id: '2', username: 'bob',   avatarUrl: '/favicon.ico' },
-  ];
+  const res = await fetch(`${API}/api/followers`);
+  if (!res.ok) throw new Error("Failed to load followers");
+  return res.json();
 }
 
 export async function fetchFollowing(): Promise<Follower[]> {
-  return [
-    { id: '3', username: 'carol', avatarUrl: '/favicon.ico' },
-    { id: '4', username: 'dave',  avatarUrl: '/favicon.ico' },
-  ];
+  const res = await fetch(`${API}/api/following`);
+  if (!res.ok) throw new Error("Failed to load following");
+  return res.json();
 }
 
 export async function fetchNonFollowers(): Promise<Follower[]> {
-  // difference between following and followers
-  return [
-    { id: '3', username: 'carol', avatarUrl: '/favicon.ico' }
-  ];
+  const res = await fetch(`${API}/api/non-followers`);
+  if (!res.ok) throw new Error("Failed to load non-followers");
+  return res.json();
 }
 
 export async function fetchTopLikers(): Promise<Liker[]> {
-  return [
-    { id: '10', username: 'erin',  avatarUrl: '/favicon.ico', likes: 42 },
-    { id: '11', username: 'frank', avatarUrl: '/favicon.ico', likes: 37 },
-  ];
+  const res = await fetch(`${API}/api/top-likers`);
+  if (!res.ok) throw new Error("Failed to load top likers");
+  return res.json();
 }
