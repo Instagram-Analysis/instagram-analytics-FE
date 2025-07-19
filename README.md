@@ -44,11 +44,11 @@ This is the Next.js + TypeScript frontend for the Instagram Analytics app. It pr
 
 ## Project Layout
 
-\`\`\`
-components/ Reusable UI parts  
-hooks/ Data-fetching React hooks  
-pages/ Next.js routes (\_app.tsx, index.tsx, followers.tsx, etc.)  
-services/ API wrappers  
-styles/ Global CSS  
-types/ TypeScript interfaces  
-\`\`\`
+```
+components/ Reusable UI parts
+hooks/ Data-fetching React hooks
+pages/ Next.js routes (\_app.tsx, index.tsx, followers.tsx, etc.)
+services/ API wrappers
+styles/ Global CSS
+types/ TypeScript interfaces
+```
